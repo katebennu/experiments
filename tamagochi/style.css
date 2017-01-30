@@ -1,0 +1,10 @@
+#output {
+    background-color: aquamarine;
+    height: 100px;
+    width: 200px;
+    padding: 8px;
+}
+
+.main {
+    padding-top: 20px;
+}

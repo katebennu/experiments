@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <div id="d">
+
+            Number: <input type="number" name="num1" id="num1"><br>
+            Another number: <input type="number" name="num2" id="num2"><br>
+            <button id="btn" onclick="sum()">Sum</button>
+
+    </div>
+
+    <script>
+        //var subm = document.getElementById("btn");
+        //subm.addEventListener("submit", sum);
+        /*function validate() {
+            var n1 = document.getElementById("num1");
+            var n2 = document.getElementById("num2");
+            if(n1.value != "" && n2.value != "") {return true};
+            alert("cannot be blank");
+            return false;
+        }*/
+
+        function sum() {
+            var n1 = parseFloat(document.getElementById("num1").value),
+                n2 = parseFloat(document.getElementById("num2").value);
+            var s = n1+n2;
+            var el = document.createElement("p");
+            var txt = document.createTextNode(s);
+            var d = document.getElementById("d");
+            el.appendChild(txt);
+            d.appendChild(el);
+        }
+    </script>
+</body>
+</html>

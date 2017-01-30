@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Test test test</h1>
+    <div id="demo">
+        <p>this shall be changed</p>
+        <p>this too shall be changed</p>
+        <p>this will stay same</p>
+        <p id="display">this will list some changes</p>
+        <p id="remove">this will be removed</p>
+        <p id="replace">this will be replaced</p>
+    </div>
+
+    <script>
+        var d = document.getElementById("demo");
+        var arr = d.childNodes;
+        for (var i=0;i<5;i++) {
+            //if (.id != "remove") {
+            arr[i].innerHTML = "new text";//}
+        }
+        var disp = document.getElementById("display");
+        disp.innerHTML = arr;
+        txt = document.createTextNode("now something completely different");
+        el = document.createElement("p");
+        el.appendChild(txt);
+        d.appendChild(el);
+        d.removeChild(document.getElementById("remove"));
+        txt2 = document.createTextNode("this is totally new sh#t");
+        el2 = document.createElement("p");
+        el2.appendChild(txt2);
+        d.replaceChild(el2, document.getElementById("replace"));
+
+    </script>
+</body>
+</html>

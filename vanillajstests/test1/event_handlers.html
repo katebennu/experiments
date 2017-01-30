@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="events">
+        <button id="btn">click me</button>
+        <p id="ht"></p>
+    </div>
+    <input type="text" id="inp" onchange="change">
+    <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", heythere);
+        var el = document.getElementById("ht");
+        var txt = document.createTextNode("hey there!");
+        function heythere() {
+            el.appendChild(txt);
+            btn.removeEventListener("click", heythere);
+            btn.addEventListener("click", hide);
+        }
+        function hide() {
+            el.removeChild(txt);
+            btn.removeEventListener("click", hide);
+            btn.addEventListener("click", heythere);
+        }
+        function change() {
+            var x = document.getElementById("inp");
+            x.value.toUpperCase();
+        }
+    </script>
+
+</body>
+</html>

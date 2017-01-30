@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+</head>
+<body>
+    <div>
+        <p id="demo">100</p>
+        <button id="divide2">divide by 2</button>
+        <button id="mult2">multiply by 2</button>
+    </div>
+    <script>
+        var divb = document.getElementById("divide2");
+        divb.addEventListener("click", divide2);
+        var multb = document.getElementById("mult2");
+        multb.addEventListener("click", mult2);
+
+        function divide2() {
+            var d = document.getElementById("demo");
+            var n = d.innerHTML;
+            d.innerHTML = n/2;
+        }
+
+        function mult2() {
+            var d = document.getElementById("demo");
+            var n = d.innerHTML;
+            d.innerHTML = n*2;
+        }
+    </script>
+</body>
+</html>

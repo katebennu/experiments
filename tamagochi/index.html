@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tamagochi</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body onload="listProps()">
+<div class="container-fluid main">
+    <script type="text/javascript" src="script.js"></script>
+    <div id="imgFrame"></div><br>
+    <div>
+        <button class="btn btn-primary" id="upd" onclick="listProps()">Upd</button>
+    </div><br>
+    <div>
+        <h2>Properties:</h2>
+        <ul id="pr"></ul>
+    </div><br>
+    <div>
+        <div>
+            Prop name: <input type="text" id="pName">
+            Prop value: <input type="text" id="pVal">
+            <br>
+            <button class="btn btn-toolbar" id="inp" onclick="addProp()">Add</button>
+        </div>
+    </div><br>
+    <div>
+        <h2>Methods:</h2>
+        <ul id="met"></ul>
+    </div>
+    <div id="output" class="out">
+        <p>Output</p>
+    </div><br>
+    <div>
+        <div>
+            Met name: <input type="text" id="mName">
+            Met value: <input type="text" id="mVal">
+            <br>
+            <button class="btn btn-toolbar" id="mInp" onclick="addMet()">Add</button>
+        </div>
+    </div><br>
+    <div id="objFrame"></div>
+</div>
+</body>
+</html>

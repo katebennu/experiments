@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+</head>
+<body>
+    <div>
+        <button onclick="prev()"> Prev </button>
+        <img id="slider" src="1.png" width="300px" height="auto">
+        <button onclick="next()"> Next </button>
+    </div>
+
+    <script>
+        var images = ["1.png","2.png","3.png"];
+        var count = 0;
+
+        function next() {
+            var slider = document.getElementById("slider");
+            count++;
+            if (count>=images.length) {count=0};
+            slider.src = images[count];
+        }
+
+        function prev() {
+            var slider = document.getElementById("slider");
+            count--;
+            if (count<0) {count = images.length-1};
+            slider.src = images[count];
+        }
+
+    </script>
+</body>
+</html>
