@@ -8,7 +8,8 @@ function ChatApp() {
             <ul>
                 {messages}
             </ul>
-            <input id="message" type="text" value={this.state.message}/>
+            <p>someone {this.state.isTyping}</p>
+            <input id="message" type="text" value={this.state.message} />
             <button onClick={() => self.submitMessage()}>Bam!</button>
             <input id="user" type="text" value={this.state.user} placeholder="pick a username"/>
         </div>
@@ -17,3 +18,6 @@ function ChatApp() {
 
 
 module.exports = ChatApp;
+
+//<p>someone {this.state.isTyping}</p>
+//onKeyPress={this.handleTyping}

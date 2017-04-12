@@ -11,6 +11,7 @@ var ChatAppContainer = React.createClass({
             messages: [],
             socket: window.io('http://localhost:3000'), //why it returns "cannot GET" on port 3000 and works on a random one?
             user: null
+
         }
     },
     componentDidMount: function () {
@@ -38,3 +39,12 @@ ReactDOM.render(
     <ChatAppContainer/>,
     document.getElementById("chat")
 );
+
+
+/*
+* FURTHER:
+* 1) onChange function for message input to e.g. show when someone is typing a message
+*
+*
+*
+* */
